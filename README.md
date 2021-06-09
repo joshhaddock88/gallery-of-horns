@@ -1,3 +1,13 @@
+# Gallery of Horns
+This is an app that displays a variety of horned creatures.
+
+**Author**: Joshua Haddock
+**Contributor**: NA
+
+**Reflections and Comments**
+This is my first time using React.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
