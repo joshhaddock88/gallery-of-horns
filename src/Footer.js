@@ -3,7 +3,9 @@ import React from 'react';
 class Footer extends React.Component {
   render () {
     return (
-      <footer>{this.props.author}</footer>
+      <footer>
+        <h2>{this.props.author}</h2>
+      </footer>
     )
   }
 }
