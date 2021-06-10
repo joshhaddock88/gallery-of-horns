@@ -7,6 +7,52 @@ This is an app that displays a variety of horned creatures.
 **Reflections and Comments**
 This is my first time using React.
 
+<br><br>
+## Feature Time Log
+
+#### 1. **Display Images**
+
+**Estimate of time needed to complete**: 60min
+
+**Start time**: 15:31
+
+**Finish time**: 16.05
+
+**Actual time needed to complete**: 34min
+
+#### 2.  **Allow User to Vote for Favorite Beast**
+
+**Estimate of time needed to complete**: 60min
+
+**Start time**: 16:08
+
+**Finish time**: 16:34
+
+**Actual time needed to complete**: 26min
+
+#### 3. **Bootstrap**
+
+**Estimate of time needed to complete**: 60min
+
+**Start time**: 17:30
+
+**Finish time**: 19:10
+
+**Actual time needed to complete**: 100min
+
+#### 4. **Display a Modal**
+
+**Estimate of time needed to complete**: 120min
+
+**Start time**: 19:10
+
+**Finish time**: 
+
+**Actual time needed to complete**: 
+
+
+
+# ---------------- REACT DOCUMENTATION BELOW ---------
 
 # Getting Started with Create React App
 
