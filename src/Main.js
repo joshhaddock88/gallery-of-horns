@@ -1,14 +1,25 @@
 import React from 'react';
 import HornedBeast from './HornedBeast'
-import beasts from './resources/data.json';
 import CardColumns from 'react-bootstrap/CardColumns';
 
 class Main extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
   render() {
-    let beastList = beasts.map(beast => <HornedBeast image_url={beast.image_url} title={beast.title} description={beast.description} keyword={beast.keyword} />)
     return (
         <CardColumns>
-          {beastList}
+          {this.props.data.map(beast => 
+            <HornedBeast 
+              image_url={beast.image_url} 
+              title={beast.title} 
+              description={beast.description} 
+              keyword={beast.keyword}
+              showModal={this.props.showModal}
+              index = {this.props.data.indexOf(beast)}
+            />)
+          }
         </CardColumns>
     );
   }

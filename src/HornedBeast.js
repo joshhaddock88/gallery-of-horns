@@ -16,10 +16,14 @@ class HornedBeast extends React.Component {
     });
   }
 
+  showModal = () => {
+    this.props.showModal(this.props.index);
+  }
+
   render() {
     return(
-        <Card style={{ width: '18em'}}>
-          <Card.Img src={this.props.image_url} alt={this.props.title} title={this.props.keyword} style={{width: '18em'}}/>
+        <Card>
+          <Card.Img onClick={this.showModal} src={this.props.image_url} alt={this.props.title} title={this.props.keyword}/>
           <Card.Body>
             <Card.Title>{this.props.title}</Card.Title>
             <Card.Text>
