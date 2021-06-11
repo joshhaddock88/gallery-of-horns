@@ -13,7 +13,8 @@ class App extends React.Component {
       currentBeast: beasts[0],
       beastList: beasts,
     };
-    console.log(this.state.beastList)
+    console.log("State list", this.state.beastList)
+    console.log("List of beasts from JSON", beasts)
   }
 
   showModal = (index) => {
@@ -30,11 +31,23 @@ class App extends React.Component {
     })
   }
 
-  filterBeastList = (beastList, selectedValue) => {
-  this.setState({
-  beastList: beastList.filter( beast => beast.horns === Number(selectedValue))
-  })
+  filterBeastList = (selectedValue) => {
+    if(selectedValue === "0") {
+      this.setState({
+        beastList: beasts
+      })
+    } else {
+      this.setState({
+        beastList: beasts.filter( beast => beast.horns === Number(selectedValue))
+    })
+  }
 }
+
+  resetBeast = () => {
+    this.setState({
+      beastList: beasts
+    })
+  }
 
   render() {
     return (
@@ -48,7 +61,7 @@ class App extends React.Component {
         <Main 
         showModal={this.showModal} 
         beastList={this.state.beastList}
-        filterBeastList={this.filterBeastList} 
+        filterBeastList={this.filterBeastList}
         />
         <Footer author="By: Joshua Haddock" />
       </>

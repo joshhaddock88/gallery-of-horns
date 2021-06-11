@@ -16,7 +16,7 @@ class Main extends React.Component {
   }
 
   filterBeastList = () => {
-    this.props.filterBeastList(this.props.beastList, document.getElementById('formValue').value)
+    this.props.filterBeastList(document.getElementById('formValue').value)
   }
 
 
@@ -29,10 +29,11 @@ class Main extends React.Component {
             <Form.Group controlID='bootStrapFormSelect'>
               <Form.Label>Select</Form.Label>
               <Form.Control id="formValue" as="select" custom>
+                <option value="0">All</option>
                 <option value="1">1 Horn</option>
                 <option value="2">2 Horns</option>
                 <option value="3">3 Horns</option>
-                <option value="4">4 Horns</option>
+                <option value="100">100 Horns</option>
               </Form.Control>
             </Form.Group>
             <Button type="submit" >Filter</Button>
