@@ -11,7 +11,7 @@ class App extends React.Component {
     this.state = {
       shouldShowModal: false,
       currentBeast: beasts[0],
-      beastList: beasts
+      beastList: beasts,
     };
     console.log(this.state.beastList)
   }
@@ -30,9 +30,11 @@ class App extends React.Component {
     })
   }
 
-  filterBeastList = (beastList, selectedValue) => beastList.filter( beast => {
-    return beast === selectedValue;
-  });
+  filterBeastList = (beastList, selectedValue) => {
+  this.setState({
+  beastList: beastList.filter( beast => beast.horns === Number(selectedValue))
+  })
+}
 
   render() {
     return (
@@ -43,7 +45,11 @@ class App extends React.Component {
           hideModal={this.hideModal}
         />
         <Header title="Horned Beasts and Where to Find Them" />
-        <Main showModal={this.showModal} beastList={this.state.beastList} />
+        <Main 
+        showModal={this.showModal} 
+        beastList={this.state.beastList}
+        filterBeastList={this.filterBeastList} 
+        />
         <Footer author="By: Joshua Haddock" />
       </>
     )
