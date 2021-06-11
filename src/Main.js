@@ -3,9 +3,6 @@ import HornedBeast from './HornedBeast'
 import CardColumns from 'react-bootstrap/CardColumns';
 
 class Main extends React.Component {
-  constructor(props) {
-    super(props);
-  }
 
   render() {
     return (

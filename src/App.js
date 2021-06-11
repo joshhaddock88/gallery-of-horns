@@ -1,4 +1,3 @@
-import CSS from './App.css';
 import data from './resources/data.json';
 import Footer from './Footer.js';
 import Header from './Header.js';
