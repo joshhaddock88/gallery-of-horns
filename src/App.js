@@ -1,4 +1,4 @@
-import data from './resources/data.json';
+import beasts from './resources/data.json';
 import Footer from './Footer.js';
 import Header from './Header.js';
 import Main from './Main.js';
@@ -10,14 +10,16 @@ class App extends React.Component {
     super(props);
     this.state = {
       shouldShowModal: false,
-      currentBeast: data[0]
+      currentBeast: beasts[0],
+      beastList: beasts
     };
+    console.log(this.state.beastList)
   }
 
   showModal = (index) => {
     this.setState({
       shouldShowModal: true,
-      currentBeast: data[index]
+      currentBeast: beasts[index]
     })
     console.log('We are working')
   }
@@ -27,6 +29,11 @@ class App extends React.Component {
       shouldShowModal: false
     })
   }
+
+  filterBeastList = (beastList, selectedValue) => beastList.filter( beast => {
+    return beast === selectedValue;
+  });
+
   render() {
     return (
       <>
@@ -36,7 +43,7 @@ class App extends React.Component {
           hideModal={this.hideModal}
         />
         <Header title="Horned Beasts and Where to Find Them" />
-        <Main showModal={this.showModal} data={data} />
+        <Main showModal={this.showModal} beastList={this.state.beastList} />
         <Footer author="By: Joshua Haddock" />
       </>
     )
