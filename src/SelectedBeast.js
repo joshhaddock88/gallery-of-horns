@@ -1,4 +1,5 @@
 import React from 'react';
+import './SelectedBeast.css';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 
@@ -10,7 +11,7 @@ class SelectedBeast extends React.Component {
           <Modal.Header closeButton >{this.props.currentBeast.title}</Modal.Header>
           <Modal.Body>
             {this.props.currentBeast.description}
-            <img style={{width: '100%'}} src={this.props.currentBeast.image_url} />
+            <img src={this.props.currentBeast.image_url}  alt={this.props.currentBeast.title}/>
             </Modal.Body>
           <Modal.Footer>
             <Button onClick={this.props.hideModal}>Close</Button>
